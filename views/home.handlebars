@@ -1,2 +1,34 @@
-<h1>This is my handlebars home page.</h1>
-<p>{{stuff}}</p>
+<div class="jumbotron">
+  <h1 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h1>
+  <table class="table" style="display: inline-block;">
+    <tbody>
+      <tr>
+        <td><strong>Latest Price</strong></td>
+        <td>${{ stock.latestPrice }}</td>
+      </tr>
+      <tr>
+        <td><strong>Previous Close</strong></td>
+        <td>${{ stock.previousClose }}</td>
+      </tr>
+      <tr>
+        <td><strong>Percent Change</strong></td>
+        <td>{{ stock.changePercent }} %</td>
+      </tr>
+      <tr>
+        <td><strong>Market Cap</strong></td>
+        <td>{{ stock.marketCap }}</td>
+      </tr><tr>
+        <td><strong>YTD Change</strong></td>
+        <td>{{ stock.ytdChange }} %</td>
+      </tr>
+      <tr>
+        <td><strong>52 Week High</strong></td>
+        <td>{{ stock.week52High }}</td>
+      </tr>
+      <tr>
+        <td><strong>52 Week Low</strong></td>
+        <td>{{ stock.week52Low }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
